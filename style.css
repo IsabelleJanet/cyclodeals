@@ -62,7 +62,7 @@ a{
 }
 
 .deal_card .card-text{
-    color: #F24F13;
+    color: #5A24A6;
     font-weight: 900;
 }
 
@@ -90,4 +90,88 @@ a{
 
 .second_section_container{
     padding: 50px;
+}
+
+.second_section_container h1{
+    color: #2B3040;
+    font-family: monospace;
+}
+
+.second_section_container h5{
+    font-family: monospace;
+    color: #5A24A6;
+}
+
+.third_section{
+    background-color: #CBC5D9;
+    padding: 100px 50px;
+    width: 100%;
+}
+
+.third_section_container{
+    padding: 50px;
+}
+
+.third_section_container h1{
+    color: #2B3040;
+    font-family: monospace;
+}
+
+.third_section_container h5{
+    font-family: monospace;
+    color: #5A24A6;
+}
+
+.overflow_container{
+    overflow-x: scroll;
+}
+
+.deal_card .card-img-top{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.bike_category{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.deal_card_bikes{
+    margin-right: 20px;
+}
+
+.deal_card_bikes .card-body{
+    background-color: #F2F2F2;
+}
+
+.card_header_row{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-img-top-category{
+    width: 150px;
+    height: 100px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.deal_card_bikes_cat{
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.deal_card_bikes .card-body{
+    padding: 30px;
+    background-color: #fff;
+    font-family: monospace;
+}
+
+.deal_card_bikes_cat .card-title{
+    font-size: 20px;
+    font-family: monospace !important;
+    padding: 20px 10px;
+    background-color: #9F96D9;
 }
