@@ -1,177 +1,232 @@
-
-.navbar{
+.navbar {
     height: 100px;
 }
 
-a{
+a {
     font-family: monospace;
 }
 
-.navbar-expand-lg .navbar-nav .dropdown-menu{
+/* Dropdown-Menü in der Navbar */
+.navbar-expand-lg .navbar-nav .dropdown-menu {
     width: fit-content;
-    padding: 50px;
+    padding: 10px;
     border: unset;
     border-radius: unset;
     background-color: #F2F2F2;
 }
 
-.nav-link{
+.nav-link {
     font-family: monospace;
 }
 
-.header_section{
+/* Header-Section */
+.header_section {
     padding: 100px 50px;
     width: 100%;
     background-image: url("images/header-image1.png");
+    background-size: cover;
 }
 
-.header_section_container{
+.header_section_container {
     padding: 50px;
 }
 
-.headline_info h1{
+.headline_info h1 {
     color: #F2F2F2;
     font-family: monospace;
     margin-bottom: 50px;
 }
 
-.card_category{
-    display: flex;
-    flex-direction: row;
-}
-
-.card_category_display{
-    background-color: #F2F2F2;
-    padding: 30px;
-    margin-right: 20px;
-}
-
-.card_category .card-body{
-    font-family: monospace;
-}
-
-.headline_info h5{
-    font-family: monospace;
-    margin: 30px 0;
-}
-
-.deal_card .card-body{
+/* Deal Card im Header */
+.deal_card .card-body {
     padding: 30px;
     background-color: #fff;
     font-family: monospace;
 }
 
-.deal_card .card-text{
+.deal_card .card-text {
     color: #5A24A6;
     font-weight: 900;
 }
 
-.btn{
+.btn {
     padding: 15px !important;
-    border-radius: 0px !important;
+    border-radius: 0 !important;
 }
 
-.deal_button{
+.deal_button {
     background-color: #2B3040 !important;
     justify-content: center;
     margin-top: 30px;
     color: #F2F2F2 !important;
 }
 
-.card_category{
-    margin: 0px !important;
-    padding: 0px !important;
-}
-
-.second_section{
+/* FAHRRÄDER SECTION */
+.second_section {
     padding: 100px 50px;
     width: 100%;
 }
 
-.second_section_container{
+.second_section_container {
     padding: 50px;
 }
 
-.second_section_container h1{
+.second_section_container h1 {
     color: #2B3040;
     font-family: monospace;
 }
 
-.second_section_container h5{
+.second_section_container h5 {
     font-family: monospace;
     color: #5A24A6;
 }
 
-.third_section{
+/* BEKLEIDUNG SECTION */
+.third_section {
     background-color: #CBC5D9;
     padding: 100px 50px;
     width: 100%;
 }
 
-.third_section_container{
+.third_section_container {
     padding: 50px;
 }
 
-.third_section_container h1{
+.third_section_container h1 {
     color: #2B3040;
     font-family: monospace;
 }
 
-.third_section_container h5{
+.third_section_container h5 {
     font-family: monospace;
     color: #5A24A6;
 }
 
-.overflow_container{
-    overflow-x: scroll;
-}
-
-.deal_card .card-img-top{
+/* Karte im Header */
+.deal_card .card-img-top {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.bike_category{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
+/* Kategorien-Karten (Unsere Kategorien) */
+.deal_card_bikes_cat {
+    max-width: 150px;
+    width: 100%;
+    margin: 0 auto 30px;
 }
 
-.deal_card_bikes{
-    margin-right: 20px;
-}
-
-.deal_card_bikes .card-body{
-    background-color: #F2F2F2;
-}
-
-.card_header_row{
-    display: flex;
-    flex-direction: row;
-}
-
-.card-img-top-category{
-    width: 150px;
-    height: 100px;
+.card-img-top-category {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
 
-.deal_card_bikes_cat{
-    width: 150px;
-    margin-bottom: 30px;
+.deal_card_bikes_cat .card-title {
+    font-size: 20px;
+    font-family: monospace !important;
+    padding: 20px 10px;
+    background-color: #9F96D9;
 }
 
-.deal_card_bikes .card-body{
+/* Karten in den Sektionen */
+.deal_card_bikes {
+    margin-bottom: 20px;
+}
+
+.deal_card_bikes .card-body {
     padding: 30px;
     background-color: #fff;
     font-family: monospace;
 }
 
-.deal_card_bikes_cat .card-title{
-    font-size: 20px;
-    font-family: monospace !important;
-    padding: 20px 10px;
-    background-color: #9F96D9;
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Offcanvas Menü als Overlay (Mobile) */
+.offcanvas {
+    width: 100% !important; /* Volle Breite */
+    height: 100vh !important; /* Volle Höhe */
+    background-color: #9F96D9; /* Abdunkelter Hintergrund */
+    color: white;
+}
+
+.offcanvas-body .nav-link {
+    font-size: 1.25rem;
+    color: #222529;
+}
+
+.offcanvas-body .nav-link:hover {
+    color: #000000;
+}
+
+.offcanvas-header .btn-close {
+    filter: invert(1); /* Close-Button weiß */
+}
+
+/* Desktop-Ansicht: Offcanvas-Menü wird inline dargestellt */
+@media (min-width: 992px) {
+    /* Blende den Toggler aus */
+    .navbar-toggler {
+        display: none;
+    }
+
+    /* Offcanvas-Container wird zum normalen Menü */
+    .offcanvas {
+        position: static;
+        visibility: visible;
+        transform: none;
+        background-color: transparent;
+        height: auto;
+        width: auto; /* Nicht mehr 100% */
+        display: flex;
+        align-items: center;
+    }
+
+    .offcanvas-header {
+        display: none;
+    }
+
+    .offcanvas-body {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Alle Navbar-Elemente in einer Zeile, vertikal zentriert */
+    .offcanvas-body ul.navbar-nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0;
+    }
+
+    /* Suchformular inline platzieren*/
+    .offcanvas-body form {
+        margin-left: 25px;
+        margin-top: 0px !important;
+        display: flex;
+        align-items: center;
+    }
+
+    .offcanvas-body form .form-control {
+        flex: 1 1 auto;
+        min-width: 200px;
+        height: 56px;
+    }
+
+    .offcanvas-body form .btn {
+        flex: 0 0 auto;
+    }
+
+    .d-flex {
+
+    }
+
+
 }
