@@ -267,3 +267,11 @@
         width: 250px;
     }
 }
+
+/* --- Hover Effekt für Karten --- */
+.card-hover {
+    transition: transform 0.3s ease;
+}
+.card-hover:hover {
+    transform: scale(1.05);
+}
