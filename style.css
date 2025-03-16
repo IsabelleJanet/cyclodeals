@@ -16,6 +16,15 @@
 .nav-link {
     font-family: monospace;
 }
+
+.navbar-container {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 .offcanvas {
     width: 100% !important;
     height: 100vh !important;
@@ -86,7 +95,7 @@
     background-size: cover;
 }
 .header_section_container {
-    padding: 50px;
+    padding: 0px;
 }
 .headline_info h1 {
     color: #F2F2F2;
@@ -124,22 +133,33 @@
 .kategorie-cards {
     -ms-overflow-style: none; /* IE und Edge */
     scrollbar-width: none;    /* Firefox */
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .kategorie-cards::-webkit-scrollbar {
     display: none;            /* Chrome, Safari und Opera */
 }
+
+.kategorie-container{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 @media (max-width: 991.98px) {
     .kategorie-cards {
         display: flex !important;
         flex-wrap: nowrap !important;
         overflow-x: auto !important;
         gap: 10px;
-        padding: 10px;
+        padding: 00px;
         scroll-snap-type: x mandatory;
     }
     .kategorie-cards > .col {
         scroll-snap-align: center;
         flex: 0 0 150px;  /* Feste Breite, um Überlappungen zu vermeiden */
+    }
+    .header_card_and_text {
+        padding-top: 30px;
     }
 }
 
@@ -180,7 +200,7 @@
     width: 100%;
 }
 .second_section_container {
-    padding: 50px;
+    padding: 0px;
 }
 .second_section_container h1 {
     color: #2B3040;
@@ -197,7 +217,7 @@
     width: 100%;
 }
 .third_section_container {
-    padding: 50px;
+    padding: 0px;
 }
 .third_section_container h1 {
     color: #2B3040;
