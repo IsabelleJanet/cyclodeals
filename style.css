@@ -1,59 +1,117 @@
+/* --- NAVBAR --- */
 .navbar {
     height: 100px;
 }
-
-a {
-    font-family: monospace;
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-
-/* Dropdown-Menü in der Navbar */
 .navbar-expand-lg .navbar-nav .dropdown-menu {
     width: fit-content;
     padding: 10px;
-    border: unset;
-    border-radius: unset;
+    border: none;
+    border-radius: 0;
     background-color: #F2F2F2;
 }
-
 .nav-link {
     font-family: monospace;
 }
+.offcanvas {
+    width: 100% !important;
+    height: 100vh !important;
+    background-color: #9F96D9;
+    color: white;
+}
+.offcanvas-body .nav-link {
+    font-size: 1.25rem;
+    color: #222529;
+}
+.offcanvas-body .nav-link:hover {
+    color: #000000;
+}
+.offcanvas-header .btn-close {
+    filter: invert(1);
+}
+/* Desktop-Ansicht: Offcanvas-Menü wird inline dargestellt */
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none;
+    }
+    .offcanvas {
+        position: static;
+        visibility: visible;
+        transform: none;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+    .offcanvas-header {
+        display: none;
+    }
+    .offcanvas-body {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .offcanvas-body ul.navbar-nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0;
+    }
+    .offcanvas-body form {
+        margin-left: 25px;
+        margin-top: 0 !important;
+        display: flex;
+        align-items: center;
+    }
+    .offcanvas-body form .form-control {
+        flex: 1 1 auto;
+        min-width: 200px;
+        height: 56px;
+    }
+    .offcanvas-body form .btn {
+        flex: 0 0 auto;
+    }
+}
 
-/* Header-Section */
+/* --- HEADER SECTION --- */
 .header_section {
     padding: 100px 50px;
     width: 100%;
     background-image: url("images/header-image1.png");
     background-size: cover;
 }
-
 .header_section_container {
     padding: 50px;
 }
-
 .headline_info h1 {
     color: #F2F2F2;
     font-family: monospace;
     margin-bottom: 50px;
 }
 
-/* Deal Card im Header */
+/* Angebotskarte im Header */
 .deal_card .card-body {
     padding: 30px;
     background-color: #fff;
     font-family: monospace;
 }
-
 .deal_card .card-text {
     color: #5A24A6;
     font-weight: 900;
 }
-
+.deal_card .card-img-top {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 .btn {
     padding: 15px !important;
     border-radius: 0 !important;
 }
-
 .deal_button {
     background-color: #2B3040 !important;
     justify-content: center;
@@ -61,172 +119,131 @@ a {
     color: #F2F2F2 !important;
 }
 
-/* FAHRRÄDER SECTION */
+/* --- UNSERE KATEGORIEN (Header) --- */
+/* Desktop: Grid, Mobil: horizontales Scrollen */
+.kategorie-cards {
+    -ms-overflow-style: none; /* IE und Edge */
+    scrollbar-width: none;    /* Firefox */
+}
+.kategorie-cards::-webkit-scrollbar {
+    display: none;            /* Chrome, Safari und Opera */
+}
+@media (max-width: 991.98px) {
+    .kategorie-cards {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 10px;
+        padding: 10px;
+        scroll-snap-type: x mandatory;
+    }
+    .kategorie-cards > .col {
+        scroll-snap-align: center;
+        flex: 0 0 150px;  /* Feste Breite, um Überlappungen zu vermeiden */
+    }
+}
+
+/* Einheitliche Karten für "Unsere Kategorien" */
+.deal_card_bikes_cat {
+    width: 150px;
+    height: 220px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.card-img-top-category {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+.deal_card_bikes_cat .card-body {
+    flex: 1 0 auto;
+    background-color: #9F96D9;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.deal_card_bikes_cat .card-title {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    font-family: monospace !important;
+}
+
+/* --- FAHRRÄDER & BEKLEIDUNG SECTIONS --- */
 .second_section {
     padding: 100px 50px;
     width: 100%;
 }
-
 .second_section_container {
     padding: 50px;
 }
-
 .second_section_container h1 {
     color: #2B3040;
     font-family: monospace;
 }
-
 .second_section_container h5 {
     font-family: monospace;
     color: #5A24A6;
 }
 
-/* BEKLEIDUNG SECTION */
 .third_section {
     background-color: #CBC5D9;
     padding: 100px 50px;
     width: 100%;
 }
-
 .third_section_container {
     padding: 50px;
 }
-
 .third_section_container h1 {
     color: #2B3040;
     font-family: monospace;
 }
-
 .third_section_container h5 {
     font-family: monospace;
     color: #5A24A6;
 }
 
-/* Karte im Header */
-.deal_card .card-img-top {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+/* --- HORIZONTAL SCROLLING (Fahrräder & Bekleidung) --- */
+.horizontal-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+    -ms-overflow-style: none;  /* IE und Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari und Opera */
 }
 
-/* Kategorien-Karten (Unsere Kategorien) */
-.deal_card_bikes_cat {
-    max-width: 150px;
-    width: 100%;
-    margin: 0 auto 30px;
-}
-
-.card-img-top-category {
-    max-width: 150px;
-    width: 100%;
-    height: auto;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-}
-
-.deal_card_bikes_cat .card-title {
-    font-size: 20px;
-    font-family: monospace !important;
-    padding: 20px 10px;
-    background-color: #9F96D9;
-}
-
-/* Karten in den Sektionen */
+/* Karten in den Sektionen (Fahrräder/Bekleidung) */
 .deal_card_bikes {
     margin-bottom: 20px;
+    flex: 0 0 auto;
+    width: 250px;
 }
-
 .deal_card_bikes .card-body {
     padding: 30px;
     background-color: #fff;
     font-family: monospace;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+/* Begrenze maximale Höhe der Bilder in den Kategorien "Fahrräder" & "Bekleidung" auf 650px */
+.second_section .deal_card_bikes img,
+.third_section .deal_card_bikes img {
+    max-height: 650px;
+    object-fit: cover;
 }
 
-
-/* Offcanvas Menü als Overlay (Mobile) */
-.offcanvas {
-    width: 100% !important; /* Volle Breite */
-    height: 100vh !important; /* Volle Höhe */
-    background-color: #9F96D9; /* Abdunkelter Hintergrund */
-    color: white;
-}
-
-.offcanvas-body .nav-link {
-    font-size: 1.25rem;
-    color: #222529;
-}
-
-.offcanvas-body .nav-link:hover {
-    color: #000000;
-}
-
-.offcanvas-header .btn-close {
-    filter: invert(1); /* Close-Button weiß */
-}
-
-/* Desktop-Ansicht: Offcanvas-Menü wird inline dargestellt */
-@media (min-width: 992px) {
-    /* Blende den Toggler aus */
-    .navbar-toggler {
-        display: none;
+/* --- MOBILE ANPASSUNGEN --- */
+@media (max-width: 991.98px) {
+    /* Für horizontale Scrollbereiche (Fahrräder & Bekleidung) */
+    .horizontal-scroll .deal_card_bikes {
+        width: 250px;
     }
-
-    /* Offcanvas-Container wird zum normalen Menü */
-    .offcanvas {
-        position: static;
-        visibility: visible;
-        transform: none;
-        background-color: transparent;
-        height: auto;
-        width: auto; /* Nicht mehr 100% */
-        display: flex;
-        align-items: center;
-    }
-
-    .offcanvas-header {
-        display: none;
-    }
-
-    .offcanvas-body {
-        padding: 0;
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-
-    /* Alle Navbar-Elemente in einer Zeile, vertikal zentriert */
-    .offcanvas-body ul.navbar-nav {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 0;
-    }
-
-    /* Suchformular inline platzieren*/
-    .offcanvas-body form {
-        margin-left: 25px;
-        margin-top: 0px !important;
-        display: flex;
-        align-items: center;
-    }
-
-    .offcanvas-body form .form-control {
-        flex: 1 1 auto;
-        min-width: 200px;
-        height: 56px;
-    }
-
-    .offcanvas-body form .btn {
-        flex: 0 0 auto;
-    }
-
-    .d-flex {
-
-    }
-
-
 }
