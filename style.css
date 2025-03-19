@@ -275,3 +275,23 @@
 .card-hover:hover {
     transform: scale(1.05);
 }
+
+/* --- FOOTER --- */
+.footer {
+    background-color: #2B3040;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 20px 0;
+    font-family: monospace;
+}
+
+.footer a {
+    color: #F2F2F2;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
