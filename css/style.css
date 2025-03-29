@@ -18,13 +18,14 @@
 }
 
 .navbar-container {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     max-width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
+/* Offcanvas-Anpassungen */
 .offcanvas {
     width: 100% !important;
     height: 100vh !important;
@@ -71,31 +72,17 @@
         gap: 1rem;
         margin-bottom: 0;
     }
-    .offcanvas-body form {
-        margin-left: 25px;
-        margin-top: 0 !important;
-        display: flex;
-        align-items: center;
-    }
-    .offcanvas-body form .form-control {
-        flex: 1 1 auto;
-        min-width: 200px;
-        height: 56px;
-    }
-    .offcanvas-body form .btn {
-        flex: 0 0 auto;
-    }
 }
 
 /* --- HEADER SECTION --- */
 .header_section {
     padding: 100px 50px;
     width: 100%;
-    background-image: url("images/header-image1.png");
+    background-image: url("../images/header-image1.png");
     background-size: cover;
 }
 .header_section_container {
-    padding: 0px;
+    padding: 0;
 }
 .headline_info h1 {
     color: #F2F2F2;
@@ -133,16 +120,16 @@
 .kategorie-cards {
     -ms-overflow-style: none; /* IE und Edge */
     scrollbar-width: none;    /* Firefox */
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .kategorie-cards::-webkit-scrollbar {
-    display: none;            /* Chrome, Safari und Opera */
+    display: none;
 }
 
-.kategorie-container{
-    padding-left: 0px;
-    padding-right: 0px;
+.kategorie-container {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @media (max-width: 991.98px) {
@@ -151,12 +138,12 @@
         flex-wrap: nowrap !important;
         overflow-x: auto !important;
         gap: 10px;
-        padding: 00px;
+        padding: 0;
         scroll-snap-type: x mandatory;
     }
     .kategorie-cards > .col {
         scroll-snap-align: center;
-        flex: 0 0 150px;  /* Feste Breite, um Überlappungen zu vermeiden */
+        flex: 0 0 150px;
     }
     .header_card_and_text {
         padding-top: 30px;
@@ -200,7 +187,7 @@
     width: 100%;
 }
 .second_section_container {
-    padding: 0px;
+    padding: 0;
 }
 .second_section_container h1 {
     color: #2B3040;
@@ -217,7 +204,7 @@
     width: 100%;
 }
 .third_section_container {
-    padding: 0px;
+    padding: 0;
 }
 .third_section_container h1 {
     color: #2B3040;
@@ -238,7 +225,7 @@
     scrollbar-width: none;     /* Firefox */
 }
 .horizontal-scroll::-webkit-scrollbar {
-    display: none;             /* Chrome, Safari und Opera */
+    display: none;
 }
 
 /* Karten in den Sektionen (Fahrräder/Bekleidung) */
@@ -262,7 +249,6 @@
 
 /* --- MOBILE ANPASSUNGEN --- */
 @media (max-width: 991.98px) {
-    /* Für horizontale Scrollbereiche (Fahrräder & Bekleidung) */
     .horizontal-scroll .deal_card_bikes {
         width: 250px;
     }
@@ -284,14 +270,11 @@
     padding: 20px 0;
     font-family: monospace;
 }
-
 .footer a {
     color: #F2F2F2;
     text-decoration: none;
     margin: 0 10px;
 }
-
 .footer a:hover {
     text-decoration: underline;
 }
-
